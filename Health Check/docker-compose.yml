@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  payment:
+    build:
+      context: payment-microservice
+    ports:
+      - "8080:8080"
+
+  health-monitoring:
+    build:
+      context: health-monitoring-microservice
+    ports:
+      - "8081:8080"
